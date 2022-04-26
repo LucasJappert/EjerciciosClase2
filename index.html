@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando con Vue2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="mensajeBienvenida colorGreen">{{ mensajeBienvenida }}</div>
+        
+        <br>
+        <div class="divExample">
+            - Usando propiedad computada (modo óptimo): <br>
+            {{ numeroA }} + {{ numeroB }} = {{ sumarAyB }}
+        </div>
+
+        <hr>
+        <div class="divExample color999">
+            - Interpolando expresiones: <br>
+            {{ numeroA }} + {{ numeroB }} = {{ numeroA + numeroB }}
+        </div>
+
+        <hr>
+        <div class="divExample color555">
+            - Usando el método (no óptimo): <br>
+            {{ numeroA }} + {{ numeroB }} = {{ SumarAyB() }}
+        </div>
+        
+        <hr>
+        <button @click="SumarAyB()">Llamar method SumarAyB</button>
+        <br>
+        <button @click="SumarAyB1()">Llamar method SumarAyB1</button>
+    </div>
+</body>
+</html>

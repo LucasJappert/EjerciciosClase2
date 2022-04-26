@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciando con Vue2</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./app.js" defer></script>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div id="app">
+        <div class="mensajeBienvenida colorGreen">Desafío genérico Clase 2</div>
+        
+        <br>
+        <div class="divExample">
+            - Usando doble data-binding: <br>
+            <input type="text" v-bind:value="mensaje1" :keyup="ActualizarVariable($event)">
+            <p>{{ mensaje1 }}</p>
+        </div>
+        
+        <hr>
+        <div class="divExample">
+            - Usando v-model: <br>
+            <input type="text" v-model="mensaje2">
+            <div>{{ mensaje2 }}</div>
+        </div>
+    </div>
+</body>
+</html>
